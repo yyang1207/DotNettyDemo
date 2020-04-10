@@ -51,9 +51,7 @@ namespace DotNettyDemo.Client
 
                 for (int i = 0; i < 10_000_000; i++)
                 {
-                    // 根据设置建立缓存区大小
-                    IByteBuffer initialMessage = Unpooled.Buffer(1024);
-                    await channel.WriteAndFlushAsync(initialMessage.WriteBytes(Encoding.UTF8.GetBytes($"{i+1}")));
+                    channel.WriteAndFlushAsync(Unpooled.CopiedBuffer(Encoding.UTF8.GetBytes($"{i+1}")));
                 }
 
                 long end = DateTime.Now.Ticks;
