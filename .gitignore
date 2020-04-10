@@ -7,3 +7,5 @@
 /DotNettyDemo.Client/obj
 /DotNettyDemo.Server/bin/Debug/netcoreapp3.1
 /DotNettyDemo.Server/obj
+/DotNettyDemo.Client/bin/Release/netcoreapp3.1
+/DotNettyDemo.Server/bin/Release/netcoreapp3.1

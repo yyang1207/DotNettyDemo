@@ -27,7 +27,9 @@ namespace DotNettyDemo.Server
                     chl.Pipeline.AddLast(new ServerTestHandler());
                 }));
 
-                IChannel channel = await bootstrap.BindAsync(9001);
+                IChannel channel = await bootstrap.BindAsync(3000);
+
+                Console.WriteLine("服务器已启动.........");
 
                 Console.ReadLine();//阻塞线程
 
